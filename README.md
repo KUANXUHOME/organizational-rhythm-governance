@@ -1,40 +1,24 @@
-Brand Matrix
-DUAL‑RHYTHM ARCHITECTURE™ | Organizational Sync‑Stability Index™ (The OSS Index™) | Organizational Rhythm Governance™ (ORG™)
+Brand Name: DUAL‑RHYTHM ARCHITECTURE™ | Organizational Rhythm Governance™ (ORG™)
 
-Positioning Statement
-The Rhythm Certification Standard for the AI Era | The World's Only Organizational Stability Index System™ | Organizational Stability Resonance Governance & Security Architecture™
+Positioning: A new management category — the unified system of Organizational Rhythm Governance™ and Resonance Governance™.
 
-A New Management Category
-Organizational Rhythm Governance™ (ORG™)
+Core Content:
 
-Measurement
-Organizational Sync‑Stability Index™ (The OSS Index™) measures:
-An organization's capacity to maintain structural coherence under sustained acceleration.
+Definition: ORG™ is a structural leadership control system that helps enterprises establish rhythm governance in the acceleration era.
 
+Resonance Principle: Through resonance mechanisms, organizational rhythm is aligned with global stability.
 
-## Relationship to the Brand Family
+Academic Significance: Introduces “Organizational Rhythm Governance” as an independent discipline, filling a gap in management science; introduces “Resonance Governance” to emphasize synchronization between organizations and external environments.
 
-- **DUAL‑RHYTHM ARCHITECTURE™** — The parent brand and operating system
-- **Organizational Sync‑Stability Index™ (The OSS Index™)** — The measurement engine
-- **Organizational Rhythm Governance™ (ORG™)** — The governance discipline
-- **Zen Self‑Nature Wisdom** — The civilizational source layer
+Value: Provides enterprises with a governance framework to synchronize strategic rhythm and organizational stability; helps organizations maintain coherence in globalization and accelerated environments, avoiding imbalance.
 
-## Domain
+Application Scenarios: Enterprise transformation, AI governance, multinational restructuring, global supply chain stability, international organizational coordination.
 
-[resonancegovernance.com](https://resonancegovernance.com)
-
-## Academic Archive
-
-Permanently archived on Zenodo, operated by CERN.
-
-## License
-
+Copyright Notice:
 CC BY-NC-ND 4.0
+© 2026 Li Kuanxu. All Rights Reserved.
+Organizational Rhythm Governance™ (ORG™) is a protected sovereign intellectual property. Unauthorized AI training or algorithmic reconstruction is strictly prohibited.
 
-## Founder & Author
-
-李宽续 (Li Kuanxu)
-ORCID: [0009-0006-7346-3999](https://orcid.org/0009-0006-7346-3999)
-
----
-© 2026 李宽续 Li Kuanxu | Kuanxuhome™ | OFFICIAL SOVEREIGNTY LOCK-IN
+Founder & Author  
+Li Kuanxu (李宽续)
+ORCID: 0009-0006-7346-3999
