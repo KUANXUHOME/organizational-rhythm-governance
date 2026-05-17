@@ -1,8 +1,16 @@
-# Organizational Rhythm Governance™ (ORG™)
+Brand Matrix
+DUAL‑RHYTHM ARCHITECTURE™ | Organizational Sync‑Stability Index™ (The OSS Index™) | Organizational Rhythm Governance™ (ORG™)
 
-**A New Management Category**
+Positioning Statement
+The Rhythm Certification Standard for the AI Era | The World's Only Organizational Stability Index System™ | Organizational Stability Resonance Governance & Security Architecture™
 
-Organizational Rhythm Governance™ (ORG™) is the governance discipline of DUAL‑RHYTHM ARCHITECTURE™. Resonance is the state achieved when dual rhythms are synchronized — the outcome of effective ORG™ deployment.
+A New Management Category
+Organizational Rhythm Governance™ (ORG™)
+
+Measurement
+Organizational Sync‑Stability Index™ (The OSS Index™) measures:
+An organization's capacity to maintain structural coherence under sustained acceleration.
+
 
 ## Relationship to the Brand Family
 
@@ -18,7 +26,6 @@ Organizational Rhythm Governance™ (ORG™) is the governance discipline of DUA
 ## Academic Archive
 
 Permanently archived on Zenodo, operated by CERN.
-Part of the DUAL‑RHYTHM ARCHITECTURE™ academic evidence chain.
 
 ## License
 
