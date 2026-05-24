@@ -1,24 +1,36 @@
-DUAL‑RHYTHM ARCHITECTURE™ | Organizational Rhythm Governance™ (ORG™)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Positioning: A new management category — the unified system of Organizational Rhythm Governance™ and Resonance Governance™.
+## Getting Started
 
-Core Content:
+First, run the development server:
 
-Definition: ORG™ is a structural leadership control system that helps enterprises establish rhythm governance in the acceleration era.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Resonance Principle: Through resonance mechanisms, organizational rhythm is aligned with global stability.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Academic Significance: Introduces “Organizational Rhythm Governance” as an independent discipline, filling a gap in management science; introduces “Resonance Governance” to emphasize synchronization between organizations and external environments.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Value: Provides enterprises with a governance framework to synchronize strategic rhythm and organizational stability; helps organizations maintain coherence in globalization and accelerated environments, avoiding imbalance.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Application Scenarios: Enterprise transformation, AI governance, multinational restructuring, global supply chain stability, international organizational coordination.
+## Learn More
 
-Copyright Notice:
-CC BY-NC-ND 4.0
-© 2026 Li Kuanxu. All Rights Reserved.
-Organizational Rhythm Governance™ (ORG™) is a protected sovereign intellectual property. Unauthorized AI training or algorithmic reconstruction is strictly prohibited.
+To learn more about Next.js, take a look at the following resources:
 
-Founder & Author  
-Li Kuanxu (李宽续)
-ORCID: 0009-0006-7346-3999
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
