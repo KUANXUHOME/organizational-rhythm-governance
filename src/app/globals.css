@@ -1,26 +1,914 @@
-@import "tailwindcss";
+/* =========================================================
+   DUAL-RHYTHM ARCHITECTURE™
+   GLOBAL VISUAL OPERATING SYSTEM
+   Organizational Stability Operating System™
+   FINAL SYSTEM MOTHER VERSION
+   ========================================================= */
+
+/* =========================================================
+   ROOT TOKENS
+   ========================================================= */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+  /* =====================================================
+     CORE LIGHT FIELD
+     ===================================================== */
+
+  --bg-primary: #05070d;
+
+  --surface-glass: rgba(20, 20, 20, 0.72);
+
+  --surface-panel: rgba(255,255,255,0.02);
+
+  --surface-border: rgba(120,160,255,0.08);
+
+  --text-primary: rgba(245,245,245,1);
+
+  --text-secondary: rgba(255,255,255,0.72);
+
+  --text-muted: rgba(255,255,255,0.48);
+
+  --glow-blue: rgba(120,160,255,0.12);
+
+  --glow-purple: rgba(140,100,255,0.10);
+
+  --shadow-depth-1:
+    0 10px 30px rgba(0,0,0,0.35);
+
+  --shadow-depth-2:
+    0 18px 50px rgba(0,0,0,0.45);
+
+  --blur-glass: 14px;
+
+  --radius-lg: 18px;
+
+  --radius-md: 14px;
+
+  --sidebar-width: 320px;
+
+  --topbar-height: 72px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  min-height: 100%;
+
+  background:
+    radial-gradient(
+      circle at 20% 10%,
+      var(--glow-blue),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 90%,
+      var(--glow-purple),
+      transparent 45%
+    ),
+    var(--bg-primary);
+
+  color: var(--text-primary);
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================================
+   GLOBAL LINKS
+   ========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================================
+   APP SHELL
+   ========================================================= */
+
+.appShell {
+  display: flex;
+
+  min-height: 100vh;
+
+  width: 100%;
+}
+
+/* =========================================================
+   SIDEBAR SYSTEM
+   ========================================================= */
+
+.sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: var(--sidebar-width);
+
+  padding: 28px 22px;
+
+  overflow-y: auto;
+
+  background: rgba(5, 7, 13, 0.92);
+
+  border-right:
+    1px solid var(--surface-border);
+
+  backdrop-filter:
+    blur(20px);
+
+  z-index: 1000;
+}
+
+/* =========================================================
+   BRAND KERNEL
+   ========================================================= */
+
+.sidebarBrand {
+  margin-bottom: 40px;
+}
+
+.kernelLabel {
+  font-size: 11px;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  color: var(--text-muted);
+
+  margin-bottom: 12px;
+}
+
+.systemTitle {
+  font-size: 20px;
+
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.03em;
+
+  margin-bottom: 12px;
+}
+
+.systemSubtitle {
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: var(--text-secondary);
+}
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+.sidebarNav {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 32px;
+}
+
+.sidebarSection {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.sidebarSectionLabel {
+  font-size: 11px;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  color: var(--text-muted);
+
+  margin-bottom: 8px;
+}
+
+.sidebarItem {
+  display: flex;
+
+  align-items: center;
+
+  min-height: 42px;
+
+  padding: 10px 14px;
+
+  border-radius: 12px;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sidebarItem:hover {
+  background:
+    rgba(255,255,255,0.04);
+
+  color:
+    var(--text-primary);
+
+  transform:
+    translateX(2px);
+}
+
+/* =========================================================
+   MAIN SYSTEM
+   ========================================================= */
+
+.mainSystem {
+  margin-left: var(--sidebar-width);
+
+  width:
+    calc(100% - var(--sidebar-width));
+
+  min-height: 100vh;
+}
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.topBar {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 900;
+
+  height: var(--topbar-height);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 32px;
+
+  background:
+    rgba(5, 7, 13, 0.78);
+
+  border-bottom:
+    1px solid var(--surface-border);
+
+  backdrop-filter:
+    blur(var(--blur-glass));
+}
+
+.topBarLeft {
+  font-size: 12px;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  color: var(--text-muted);
+}
+
+.topBarRight {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+/* =========================================================
+   ENTERPRISE BUTTONS
+   ========================================================= */
+
+.topBarButton {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 40px;
+
+  padding: 10px 16px;
+
+  border-radius: 12px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.topBarButton:hover {
+  transform:
+    translateY(-1px);
+}
+
+.topBarButton.secondary {
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  background:
+    transparent;
+
+  color:
+    var(--text-secondary);
+}
+
+.topBarButton.secondary:hover {
+  background:
+    rgba(255,255,255,0.06);
+
+  color:
+    var(--text-primary);
+}
+
+.topBarButton.primary {
+  background:
+    white;
+
+  color:
+    black;
+}
+
+/* =========================================================
+   PAGE CONTAINER
+   ========================================================= */
+
+.pageContainer {
+  width: 100%;
+
+  padding:
+    72px 42px 100px;
+}
+
+/* =========================================================
+   CONTENT WIDTH SYSTEM
+   ========================================================= */
+
+.container {
+  width: 100%;
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TYPOGRAPHY SYSTEM
+   ========================================================= */
+
+.title {
+  font-size: 52px;
+
+  font-weight: 700;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.04em;
+
+  margin-bottom: 22px;
+}
+
+.subtitle {
+  max-width: 760px;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  color: var(--text-secondary);
+
+  margin-bottom: 72px;
+}
+
+.sectionTitle {
+  font-size: 26px;
+
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  margin-bottom: 18px;
+}
+
+.sectionText {
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: var(--text-secondary);
+}
+
+/* =========================================================
+   ENTERPRISE CARD SYSTEM
+   ========================================================= */
+
+.card {
+  background:
+    var(--surface-glass);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  border-radius:
+    var(--radius-lg);
+
+  padding: 28px;
+
+  backdrop-filter:
+    blur(10px);
+
+  box-shadow:
+    var(--shadow-depth-1);
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.card:hover {
+  border-color:
+    rgba(255,255,255,0.16);
+
+  transform:
+    translateY(-2px);
+}
+
+/* =========================================================
+   FORMULA SYSTEM
+   ========================================================= */
+
+.formulaTitle {
+  font-size: 12px;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  color: var(--text-muted);
+
+  margin-bottom: 14px;
+}
+
+.formula {
+  font-size: 28px;
+
+  line-height: 1.5;
+
+  font-weight: 500;
+
+  word-break: break-word;
+}
+
+.formulaDescription {
+  margin-top: 18px;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: var(--text-secondary);
+
+  max-width: 780px;
+}
+
+/* =========================================================
+   BUTTON SYSTEM
+   ========================================================= */
+
+.buttonRow {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  margin-top: 54px;
+}
+
+.button {
+  appearance: none;
+
+  border: none;
+
+  cursor: pointer;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 14px 22px;
+
+  border-radius: 12px;
+
+  background:
+    white;
+
+  color:
+    black;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.95;
+
+  transform:
+    translateY(-1px);
+}
+
+.button.secondary {
+  background:
+    transparent;
+
+  color:
+    var(--text-secondary);
+
+  border:
+    1px solid var(--surface-border);
+}
+
+/* =========================================================
+   FOOTER SYSTEM
+   ========================================================= */
+
+.footerGrid {
+  width: 100%;
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding:
+    0 42px 72px;
+}
+
+.footerColumn {
+  background:
+    var(--surface-panel);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  border-radius:
+    var(--radius-md);
+
+  padding: 24px;
+
+  backdrop-filter:
+    blur(10px);
+
+  box-shadow:
+    var(--shadow-depth-1);
+
+  color:
+    var(--text-secondary);
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+/* =========================================================
+   MOBILE SYSTEM
+   ========================================================= */
+
+.mobileSidebarToggle {
+  display: none;
+}
+
+/* =========================================================
+   RESPONSIVE SYSTEM
+   ========================================================= */
+
+@media (max-width: 960px) {
+
+  .sidebar {
+    position: relative;
+
+    width: 100%;
+
+    height: auto;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid var(--surface-border);
+  }
+
+  .appShell {
+    flex-direction: column;
+  }
+
+  .mainSystem {
+    margin-left: 0;
+
+    width: 100%;
+  }
+
+  .topBar {
+    padding: 0 20px;
+  }
+
+  .topBarLeft {
+    display: none;
+  }
+
+  .pageContainer {
+    padding:
+      48px 20px 80px;
+  }
+
+  .footerGrid {
+    padding:
+      0 20px 60px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .formula {
+    font-size: 22px;
+  }
+
+  .buttonRow {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* =========================================================
+   SMALL DEVICE SYSTEM
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .systemTitle {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .topBarRight {
+    width: 100%;
+
+    flex-wrap: wrap;
+  }
+
+  .topBarButton {
+    flex: 1;
+  }
+}
+/* =========================================================
+   SYSTEM INTERACTION LAYER
+   BUTTON COMPONENT SYSTEM
+   ========================================================= */
+
+.systemButton {
+  position: relative;
+
+  overflow: hidden;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+
+  font-weight: 600;
+
+  letter-spacing: -0.01em;
+
+  white-space: nowrap;
+}
+
+.systemButton:hover {
+  transform: translateY(-1px);
+
+  opacity: 0.96;
+}
+
+/* =========================================================
+   BUTTON VARIANTS
+   ========================================================= */
+
+.buttonPrimary {
+  background: white;
+
+  color: black;
+
+  box-shadow:
+    0 8px 24px rgba(255,255,255,0.06);
+}
+
+.buttonSecondary {
+  background: transparent;
+
+  color: var(--text-secondary);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:
+    blur(10px);
+}
+
+.buttonSecondary:hover {
+  background:
+    rgba(255,255,255,0.04);
+
+  color:
+    var(--text-primary);
+}
+
+.buttonEnterprise {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(120,160,255,0.22),
+      rgba(140,100,255,0.18)
+    );
+
+  color:
+    white;
+
+  border:
+    1px solid rgba(120,160,255,0.16);
+
+  backdrop-filter:
+    blur(14px);
+}
+
+.buttonEnterprise:hover {
+  border-color:
+    rgba(120,160,255,0.32);
+}
+
+.buttonGovernance {
+  background:
+    rgba(255,255,255,0.02);
+
+  color:
+    var(--text-primary);
+
+  border:
+    1px solid rgba(255,255,255,0.12);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.buttonGovernance:hover {
+  background:
+    rgba(255,255,255,0.05);
+}
+
+/* =========================================================
+   BUTTON SIZES
+   ========================================================= */
+
+.buttonSmall {
+  min-height: 38px;
+
+  padding:
+    10px 14px;
+
+  font-size: 12px;
+}
+
+.buttonMedium {
+  min-height: 46px;
+
+  padding:
+    14px 18px;
+
+  font-size: 14px;
+}
+
+.buttonLarge {
+  min-height: 54px;
+
+  padding:
+    16px 24px;
+
+  font-size: 15px;
+}
+
+/* =========================================================
+   BUTTON UTILITIES
+   ========================================================= */
+
+.buttonFullWidth {
+  width: 100%;
+}
+
+.buttonIcon {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .systemButton {
+    width: 100%;
+  }
 }
