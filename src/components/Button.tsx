@@ -2,11 +2,11 @@
 // /components/Button.tsx
 // DUAL-RHYTHM ARCHITECTURE™
 // System Interaction Layer
-// FINAL ENTERPRISE VERSION
+// FINAL SYSTEM VERSION
 // =========================================================
 
 import Link from "next/link";
-import React from "react";
+import { ReactNode } from "react";
 
 // =========================================================
 // TYPES
@@ -24,7 +24,7 @@ type ButtonSize =
   | "lg";
 
 interface ButtonProps {
-  label: string;
+  children: ReactNode;
 
   href?: string;
 
@@ -36,7 +36,7 @@ interface ButtonProps {
 
   fullWidth?: boolean;
 
-  icon?: React.ReactNode;
+  icon?: ReactNode;
 
   className?: string;
 
@@ -48,7 +48,7 @@ interface ButtonProps {
 // =========================================================
 
 export default function Button({
-  label,
+  children,
 
   href,
 
@@ -115,7 +115,7 @@ export default function Button({
           </span>
         )}
 
-        <span>{label}</span>
+        <span>{children}</span>
       </a>
     );
   }
@@ -136,7 +136,7 @@ export default function Button({
           </span>
         )}
 
-        <span>{label}</span>
+        <span>{children}</span>
       </Link>
     );
   }
@@ -157,10 +157,7 @@ export default function Button({
         </span>
       )}
 
-      <span>{label}</span>
+      <span>{children}</span>
     </button>
   );
 }
-
-
-
