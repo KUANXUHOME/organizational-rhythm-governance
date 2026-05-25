@@ -5,24 +5,6 @@ export default function HomePage() {
   return (
     <div className="container">
 
-      {/* =====================================================
-          SYSTEM IDENTITY
-      ===================================================== */}
-      <div className="brandSignal">
-        STRUCTURAL MANAGEMENT PHYSICS
-      </div>
-
-      {/* =====================================================
-          HERO
-      ===================================================== */}
-      <h1 className="title">
-        DUAL-RHYTHM ARCHITECTURE™
-      </h1>
-
-      <div className="ecosystem">
-        Organizational Stability Operating System™
-      </div>
-
       <p className="subtitle">
         In the AI era, competitive advantage shifts from speed
         to structural coherence.
@@ -105,42 +87,3 @@ export default function HomePage() {
         </div>
 
       </section>
-
-      {/* =====================================================
-          SYSTEM ACCESS
-      ===================================================== */}
-      <div className="buttonRow">
-
-        <Button
-          href="/system"
-          variant="primary"
-        >
-          Explore System Architecture
-        </Button>
-
-        <Button
-          href="/oss"
-          variant="secondary"
-        >
-          View The OSS Index™
-        </Button>
-
-        <Button
-          href="/certification"
-          variant="secondary"
-        >
-          Certification Framework
-        </Button>
-
-        <Button
-          href="/academic"
-          variant="secondary"
-        >
-          Academic Archive
-        </Button>
-
-      </div>
-
-    </div>
-  );
-}
