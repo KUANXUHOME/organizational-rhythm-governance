@@ -15,9 +15,7 @@ export default function HomePage() {
         explain or govern this phenomenon.
         <br /><br />
 
-        DUAL-RHYTHM ARCHITECTURE™ ｜ Organizational
-        Sync-Stability Index™ (The OSS Index™) ｜ Organizational
-        Rhythm Governance™ (ORG™) provides the structural solution.
+        DUAL-RHYTHM ARCHITECTURE™ provides the structural solution.
       </p>
 
       {/* =====================================================
@@ -66,24 +64,13 @@ export default function HomePage() {
           SYSTEM POSITIONING
       ===================================================== */}
       <section className="registry">
+  <div className="registryItem">
+    The World&apos;s Only Organizational Sync-Stability Index System™
+    <br /><br />
+    Organizational Stability Rhythm Governance &amp; Security Architecture™
+  </div>
+</section>
 
-        <div className="registryTitle">
-          Organizational Stability Operating System™
-        </div>
-
-        <div className="registryItem">
-          DUAL-RHYTHM ARCHITECTURE™
-          <br /><br />
-
-          The Rhythm Certification Standard for the AI Era
-          <br /><br />
-
-          The World&apos;s Only Organizational Sync-Stability
-          Index System™
-          <br /><br />
-
-          Organizational Stability Rhythm Governance &amp;
-          Security Architecture™
-        </div>
-
-      </section>
+</div>
+  );
+}
